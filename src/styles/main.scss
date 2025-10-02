@@ -12,6 +12,10 @@ $start-day: (
 
 body {
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .calendar {
@@ -19,8 +23,7 @@ body {
   flex-wrap: wrap;
   gap: $gap-size;
   width: (7 * $day-dimensions) + (6 * $gap-size);
-  padding-block: 81px;
-  padding-inline: 159px;
+  padding: 5px;
 }
 
 .calendar__day {
