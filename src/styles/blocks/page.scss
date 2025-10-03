@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+}
+
+.month {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day {
+  height: $day-dimensions;
+  width: $day-dimensions;
+  box-sizing: border-box;
+  border: 1px solid black;
+  background-color: #eee;
+}
+
+@for $number from 1 through 31 {
+  .day::before {
+    content: #{number};
+  }
+}

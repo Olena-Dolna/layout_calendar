@@ -1,5 +1,7 @@
 $day-dimensions: 100px;
 $gap-size: 1px;
+$columns: 7;
+$lift: 20px;
 $start-day: (
   'mon': 1,
   'tue': 2,
@@ -22,7 +24,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: $gap-size;
-  width: (7 * $day-dimensions) + (6 * $gap-size);
+  width: ($columns * $day-dimensions) + (($columns - 1) * $gap-size);
   padding: 5px;
 }
 
@@ -40,7 +42,7 @@ body {
 .calendar__day:hover {
   background-color: #ffbfcb;
   transform: translateY(-20px);
-  transition: 0.5s;
+  transition-duration: 0.5s;
   cursor: pointer;
 }
 
